@@ -54,8 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
           >
-            A software engineer with 4+ years of experience, now a Master's student at NYU. 
-	    Passionate about turning complex ideas into elegant solutions that work, and work well.
+            A software engineer with 4+ years of experience, now a Master's student at NYU. Passionate about turning complex ideas into elegant solutions that work, and work well.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -77,9 +76,12 @@ export default function Hero() {
               variant="outline" 
               size="lg"
               className="border-section-border bg-transparent text-foreground hover:bg-accent px-8 py-6 text-lg hover-glow group"
+              asChild
             >
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Download CV
+              <a href="/Resume_Arnab_Bhowal.pdf" download>
+                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                Download CV
+              </a>
             </Button>
           </motion.div>
 
@@ -98,6 +100,8 @@ export default function Hero() {
               <motion.a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="p-3 rounded-full border border-section-border bg-card/50 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all hover-glow"
@@ -107,28 +111,28 @@ export default function Hero() {
               </motion.a>
             ))}
           </motion.div>
-
-          {/* Scroll indicator - moved below social icons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-section-border rounded-full flex justify-center"
-            >
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-primary rounded-full mt-2"
-              />
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator - Moved outside the main content flow to prevent overlap */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-section-border rounded-full flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1 h-3 bg-primary rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

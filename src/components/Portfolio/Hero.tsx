@@ -54,9 +54,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
           >
-            MS Computer Engineering student at NYU with professional experience at Capgemini. 
-            Specialized in full-stack development, AI/ML, and product lifecycle management. 
-            Recent HackNYU 2025 winner for best use of Gen-AI.
+            A software engineer with 4+ years of experience, now a Master's student at NYU. 
+	    Passionate about turning complex ideas into elegant solutions that work, and work well.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -92,7 +91,7 @@ export default function Hero() {
             className="flex justify-center gap-6 pt-8"
           >
           {[
-            { Icon: Github, href: '#', label: 'GitHub' },
+            { Icon: Github, href: 'https://github.com/arnabbhowal', label: 'GitHub' },
             { Icon: Linkedin, href: 'http://www.linkedin.com/in/arnabb1998', label: 'LinkedIn' },
             { Icon: Mail, href: 'mailto:arnab.bhowal@nyu.edu', label: 'Email' }
           ].map(({ Icon, href, label }) => (

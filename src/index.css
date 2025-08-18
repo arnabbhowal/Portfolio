@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sophisticated Portfolio Design System - Dark Theme with Blue Accents */
+
+@layer base {
+  :root {
+    /* Base colors - sophisticated dark palette */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Electric blue accent */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Subtle gray variations */
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 5% 10%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 8% 12%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 217 91% 60%;
+
+    --radius: 1rem;
+
+    /* Portfolio specific colors */
+    --hero-gradient-start: 240 10% 3.9%;
+    --hero-gradient-end: 240 15% 8%;
+    --section-border: 240 6% 15%;
+    --text-subtle: 240 5% 60%;
+    --text-emphasis: 0 0% 100%;
+    
+    /* Glows and shadows */
+    --glow-primary: 217 91% 60% / 0.3;
+    --glow-secondary: 217 91% 70% / 0.1;
+    --shadow-elevation: 240 10% 1%;
+    
+    /* 3D scene colors */
+    --mesh-primary: 217 91% 60%;
+    --mesh-secondary: 280 91% 60%;
+    --mesh-accent: 140 91% 60%;
+  }
+}
+
+/* Typography scale */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 10px hsl(var(--primary-glow) / 0.3); }
+  50% { text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.6), 0 0 30px hsl(var(--primary-glow) / 0.3); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Gradient definitions */
+.bg-hero-gradient {
+  background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+}
+
+.bg-card-gradient {
+  background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent)) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Hover effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px hsl(var(--glow-primary));
+  transform: translateY(-2px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

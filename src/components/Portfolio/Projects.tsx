@@ -15,7 +15,7 @@ const projects = [
     image: project1,
     technologies: ['Flutter', 'Flask', 'Python', 'DeepSeek', 'Perplexity', 'Gemini'],
     liveUrl: 'https://devpost.com/software/pickle-frgobu',
-    githubUrl: 'https://devpost.com/software/pickle-frgobu',
+    githubUrl: 'https://github.com/arnabbhowal/Pickle',
     featured: true
   },
   {
@@ -24,7 +24,6 @@ const projects = [
     description: 'Published international research paper. Built a machine learning-driven, drone-integrated object detection model to automate pesticide application & crop detection, reducing labor-intensive methods in India\'s agriculture sector.',
     image: project2,
     technologies: ['Python', 'YOLO V3', 'Computer Vision', 'CNN', 'LabelImg'],
-    liveUrl: 'https://ijsrcseit.com/paper/CSEIT206381.pdf',
     githubUrl: 'https://ijsrcseit.com/paper/CSEIT206381.pdf',
     featured: true
   },
@@ -34,8 +33,6 @@ const projects = [
     description: 'Full-stack web platform connecting 50+ tutors with students nearby. Enhanced tutor-student matching and communication by 40% based on locality. Deployed with 99.9% uptime and robust database handling 1,000+ records.',
     image: project3,
     technologies: ['MySQL', 'HTML', 'CSS', 'JavaScript', 'SiteGround', 'Bitbucket'],
-    liveUrl: '#',
-    githubUrl: '#',
     featured: false
   }
 ];
